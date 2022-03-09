@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20211201 16:08:51.449" rpa="false" schemaversion="2">
+<suite id="s1" name="Lab Ui" source="D:\ae-lab\example\lab_ui\lab_ui.robot">
+<test id="s1-t1" name="TC_001 : TEST AUTOMATION UI LEVEL">
+<kw name="Create Chrome Webdriver" library="selenium_keywords">
+<arg>http://172.30.138.33/KPTest/KPLUS_AccountManagement.aspx</arg>
+<doc>create new chrome driver with options</doc>
+<msg timestamp="20211201 16:08:51.727" level="TRACE">Arguments: [ ${url}='http://172.30.138.33/KPTest/KPLUS_AccountManagement.aspx' | ${driver_path}='D:\\ae-lab\\drivers\\win32\\chromedriver_88' | ${speed}='0.1' ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>------</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20211201 16:08:51.728" level="TRACE">Arguments: [ '------' ]</msg>
+<msg timestamp="20211201 16:08:51.734" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.728" endtime="20211201 16:08:51.734"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211201 16:08:51.734" level="TRACE">Arguments: [ "sys.modules['selenium.webdriver'].ChromeOptions()" | 'sys' ]</msg>
+<msg timestamp="20211201 16:08:51.735" level="TRACE">Return: &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt;</msg>
+<msg timestamp="20211201 16:08:51.735" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt;</msg>
+<status status="PASS" starttime="20211201 16:08:51.734" endtime="20211201 16:08:51.735"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>useAutomationExtension</arg>
+<arg>${False}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20211201 16:08:51.735" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | 'add_experimental_option' | 'useAutomationExtension' | False ]</msg>
+<msg timestamp="20211201 16:08:51.735" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.735" endtime="20211201 16:08:51.735"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--test-type</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20211201 16:08:51.735" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | 'add_argument' | '--test-type' ]</msg>
+<msg timestamp="20211201 16:08:51.735" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.735" endtime="20211201 16:08:51.736"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | 'add_argument' | '--ignore-certificate-errors' ]</msg>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.736" endtime="20211201 16:08:51.736"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | 'add_argument' | '--disable-gpu' ]</msg>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.736" endtime="20211201 16:08:51.736"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | 'add_argument' | '--no-sandbox' ]</msg>
+<msg timestamp="20211201 16:08:51.736" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:51.736" endtime="20211201 16:08:51.736"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${kwargs}</var>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20211201 16:08:51.737" level="TRACE">Arguments: [ 'executable_path=${driver_path}' ]</msg>
+<msg timestamp="20211201 16:08:51.737" level="TRACE">Return: {'executable_path': 'D:\\ae-lab\\drivers\\win32\\chromedriver_88'}</msg>
+<msg timestamp="20211201 16:08:51.737" level="INFO">${kwargs} = {'executable_path': 'D:\\ae-lab\\drivers\\win32\\chromedriver_88'}</msg>
+<status status="PASS" starttime="20211201 16:08:51.737" endtime="20211201 16:08:51.737"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>kwargs=${kwargs}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20211201 16:08:51.738" level="TRACE">Arguments: [ 'Chrome' | chrome_options=&lt;selenium.webdriver.chrome.options.Options object at 0x0000018CD81893D0&gt; | kwargs={'executable_path': 'D:\\ae-lab\\drivers\\win32\\chromedriver_88'} ]</msg>
+<msg timestamp="20211201 16:08:51.738" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20211201 16:08:53.299" level="DEBUG">POST http://127.0.0.1:58430/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"useAutomationExtension": false, "extensions": [], "args": ["--test-type", "--ignore-certificate-errors", "--disable-gpu", "--no-sandbox"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"useAutomationExtension": false, "extensions": [], "args": ["--test-type", "--ignore-certificate-errors", "--disable-gpu", "--no-sandbox"]}}}</msg>
+<msg timestamp="20211201 16:08:53.299" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:58430</msg>
+<msg timestamp="20211201 16:08:54.786" level="DEBUG">http://127.0.0.1:58430 "POST /session HTTP/1.1" 500 1271</msg>
+<msg timestamp="20211201 16:08:54.787" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211201 16:08:56.812" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211201 16:08:56.812" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20211201 16:08:56.812" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:56.811" endtime="20211201 16:08:56.812"/>
+</kw>
+<msg timestamp="20211201 16:08:56.822" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 88
+Current browser version is 75.0.3770.100 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+</msg>
+<msg timestamp="20211201 16:08:56.822" level="DEBUG">Traceback (most recent call last):
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\SeleniumLibrary\__init__.py", line 492, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\robotlibcore.py", line 94, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\SeleniumLibrary\keywords\browsermanagement.py", line 391, in create_webdriver
+    driver = creation_func(**init_kwargs)
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "d:\users\chutima.pal\appdata\local\programs\python\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+<status status="FAIL" starttime="20211201 16:08:51.737" endtime="20211201 16:08:56.822"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.823" endtime="20211201 16:08:56.823"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>url: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.824" endtime="20211201 16:08:56.824"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.824" endtime="20211201 16:08:56.824"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>speed: ${speed}s</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.824" endtime="20211201 16:08:56.824"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>------</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.824" endtime="20211201 16:08:56.824"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20211201 16:08:56.824" endtime="20211201 16:08:56.824"/>
+</kw>
+<status status="FAIL" starttime="20211201 16:08:51.727" endtime="20211201 16:08:56.825"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20211201 16:08:56.828" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211201 16:08:56.828" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20211201 16:08:56.828" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211201 16:08:56.826" endtime="20211201 16:08:56.828"/>
+</kw>
+<doc>คำสั่ง run Command : "robot -P libs -d results -i test_lab2 workspace"</doc>
+<tag>CHROME</tag>
+<tag>LAB2</tag>
+<tag>POSITIVE</tag>
+<tag>test_lab2</tag>
+<tag>UI</tag>
+<status status="FAIL" starttime="20211201 16:08:51.726" endtime="20211201 16:08:56.828">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 88
+Current browser version is 75.0.3770.100 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+</status>
+</test>
+<status status="FAIL" starttime="20211201 16:08:51.451" endtime="20211201 16:08:56.831"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">CHROME</stat>
+<stat pass="0" fail="1" skip="0">LAB2</stat>
+<stat pass="0" fail="1" skip="0">POSITIVE</stat>
+<stat pass="0" fail="1" skip="0">test_lab2</stat>
+<stat pass="0" fail="1" skip="0">UI</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lab Ui">Lab Ui</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

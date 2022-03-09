@@ -1,0 +1,5 @@
+dictdiffer==0.8.1
+pylint==2.5.3
+pytz==2020.1
+requests==2.24.0
+robotframework==3.2.1

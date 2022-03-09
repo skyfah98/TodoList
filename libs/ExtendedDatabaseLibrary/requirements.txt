@@ -1,0 +1,1 @@
+robotframework-databaselibrary==1.2.4
